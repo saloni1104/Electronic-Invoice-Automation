@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div.maindiv
+    center
+      h1 Welcome to Invoice Processor by Team noname
+      h2 Please select the invoice for uploading
+    form(method="post", name="form1", action="/upload", enctype="multipart/form-data", class="upload-form")
+      fieldset
+        legend Upload the Invoice.pdf
+        input(type="file", name="singleFile", accept="application/pdf", class="upload-file")
+      center
+        div.actions
+          button.btn.primary(type="submit" class="btn-upload") UPLOAD
+          button.btn.cancel(type="button" class="cancel-btn") CANCEL

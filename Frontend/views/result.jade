@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    center
+        h1 Upload Result
+
+        p=message
+
+        h2 File ETag(s)
+        ul
+        each id in entitiyIDs
+            li= id
